@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GigHarmony | Musician Dashboard</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            dark: { 900: '#0a0b0e', 800: '#12141c', 700: '#1a1d29', 600: '#262a3b' },
+            brand: { 500: '#6366f1', 600: '#4f46e5' },
+            accent: '#10b981'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-900 text-gray-100 min-h-screen flex flex-col justify-between">
+
+  <!-- Shared Header -->
+  <header class="border-b border-dark-700 bg-dark-800/85 backdrop-blur sticky top-0 z-50 w-full">
+    <div class="w-full px-8 h-20 flex items-center justify-between">
+      <a href="homepage.html" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+          <i class="fa-solid fa-music"></i>
+        </div>
+        <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">GigHarmony</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="homepage.html" class="text-gray-300 hover:text-white transition">Home</a>
+        <a href="discoverypage.html" class="text-gray-300 hover:text-white transition">Discover</a>
+        <a href="musicianprofilepage.html" class="text-gray-300 hover:text-white transition">Profile</a>
+        <a href="musiciandashboard.html" class="text-white font-semibold transition border-b-2 border-brand-500 pb-1">Musician Dashboard</a>
+        <a href="hirerdashboard.html" class="text-gray-300 hover:text-white transition">Hirer Dashboard</a>
+      </nav>
+
+      <div>
+        <a href="checkoutpage.html" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl text-sm font-semibold transition shadow-lg shadow-brand-600/20">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Content -->
+  <main class="relative flex-grow w-full px-8 sm:px-16 py-12 max-w-[1600px] mx-auto space-y-10">
+    <!-- Ambient Glow Background -->
+    <div class="absolute top-10 left-10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Header Title & Quick Actions -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-dark-700/60 pb-8">
+      <div>
+        <h1 class="text-4xl font-extrabold text-white tracking-tight">Musician Dashboard</h1>
+        <p class="text-gray-400 text-sm mt-1">Welcome back, Alex! Manage your performance bookings and track earnings.</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button class="px-5 py-2.5 bg-dark-800/80 hover:bg-dark-700 border border-dark-700 text-gray-300 hover:text-white rounded-xl text-sm font-semibold transition flex items-center gap-2">
+          <i class="fa-solid fa-calendar-days"></i> Calendar Sync
+        </button>
+        <a href="musicianprofilepage.html" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl text-sm font-semibold transition">Edit Profile</a>
+      </div>
+    </div>
+
+    <!-- Metrics Stat Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-2">
+        <div class="flex items-center justify-between text-gray-400">
+          <span class="text-xs font-semibold uppercase tracking-wider">Total Earnings</span>
+          <i class="fa-solid fa-dollar-sign text-emerald-400 text-lg"></i>
+        </div>
+        <p class="text-3xl font-extrabold text-emerald-400">$2,450</p>
+        <p class="text-xs text-gray-500"><span class="text-emerald-400 font-bold">+18%</span> vs last month</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-2">
+        <div class="flex items-center justify-between text-gray-400">
+          <span class="text-xs font-semibold uppercase tracking-wider">Upcoming Gigs</span>
+          <i class="fa-solid fa-guitar text-brand-500 text-lg"></i>
+        </div>
+        <p class="text-3xl font-extrabold text-brand-500">4</p>
+        <p class="text-xs text-gray-500">Next event: Tomorrow, 8 PM</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-2">
+        <div class="flex items-center justify-between text-gray-400">
+          <span class="text-xs font-semibold uppercase tracking-wider">Pending Quotes</span>
+          <i class="fa-solid fa-clock text-amber-400 text-lg"></i>
+        </div>
+        <p class="text-3xl font-extrabold text-amber-400">2</p>
+        <p class="text-xs text-gray-500">Awaiting hirer confirmation</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-2">
+        <div class="flex items-center justify-between text-gray-400">
+          <span class="text-xs font-semibold uppercase tracking-wider">Profile Views</span>
+          <i class="fa-solid fa-eye text-indigo-400 text-lg"></i>
+        </div>
+        <p class="text-3xl font-extrabold text-white">342</p>
+        <p class="text-xs text-gray-500"><span class="text-emerald-400 font-bold">+12%</span> profile visibility</p>
+      </div>
+    </div>
+
+    <!-- Management Grids -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Upcoming Schedule (2 Columns) -->
+      <div class="lg:col-span-2 p-8 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-6">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-brand-500"></i> Upcoming Gig Schedule
+          </h2>
+          <span class="text-xs text-gray-400">Showing next 30 days</span>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Gig Item 1 -->
+          <div class="p-5 rounded-xl bg-dark-700/40 border border-dark-600/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-brand-500/40 transition">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase">Confirmed</span>
+                <h3 class="text-base font-bold text-white">The Blue Note Lounge</h3>
+              </div>
+              <p class="text-xs text-gray-400"><i class="fa-solid fa-calendar mr-1"></i> Oct 24, 2026 • 8:00 PM – 11:00 PM</p>
+              <p class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1"></i> Downtown Avenue, Suite 400</p>
+            </div>
+            <div class="text-left sm:text-right space-y-1">
+              <p class="text-base font-bold text-white">$540</p>
+              <button class="px-3 py-1.5 bg-dark-800 hover:bg-dark-600 border border-dark-600 text-gray-300 text-xs font-semibold rounded-lg transition">View Details</button>
+            </div>
+          </div>
+
+          <!-- Gig Item 2 -->
+          <div class="p-5 rounded-xl bg-dark-700/40 border border-dark-600/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-brand-500/40 transition">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-brand-600/20 text-brand-400 border border-brand-500/30 text-[10px] font-bold uppercase">Escrow Locked</span>
+                <h3 class="text-base font-bold text-white">Grand Hotel Sunset Gala</h3>
+              </div>
+              <p class="text-xs text-gray-400"><i class="fa-solid fa-calendar mr-1"></i> Nov 02, 2026 • 6:30 PM – 9:30 PM</p>
+              <p class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1"></i> Grand Ballroom Plaza</p>
+            </div>
+            <div class="text-left sm:text-right space-y-1">
+              <p class="text-base font-bold text-white">$720</p>
+              <button class="px-3 py-1.5 bg-dark-800 hover:bg-dark-600 border border-dark-600 text-gray-300 text-xs font-semibold rounded-lg transition">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pending Booking Requests (1 Column) -->
+      <div class="p-8 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-6">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-bell text-amber-400"></i> New Direct Inquiries
+        </h2>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-dark-700/50 border border-dark-600/50 space-y-3">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="text-sm font-bold text-white">Private Wedding Set</h4>
+                <p class="text-xs text-gray-400">Requested by Sarah M.</p>
+              </div>
+              <span class="text-xs font-bold text-emerald-400">$360</span>
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed">Looking for a 2-hour solo saxophone set for cocktail hour reception.</p>
+            <div class="flex gap-2 pt-1">
+              <button class="w-full py-1.5 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-semibold transition">Accept</button>
+              <button class="w-full py-1.5 bg-dark-800 hover:bg-dark-600 border border-dark-600 text-gray-300 rounded-lg text-xs font-semibold transition">Decline</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

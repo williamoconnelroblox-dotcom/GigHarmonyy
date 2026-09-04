@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GigHarmony | Discover Artists</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            dark: { 900: '#0a0b0e', 800: '#12141c', 700: '#1a1d29', 600: '#262a3b' },
+            brand: { 500: '#6366f1', 600: '#4f46e5' },
+            accent: '#10b981'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-900 text-gray-100 min-h-screen flex flex-col justify-between">
+
+  <!-- Shared Header -->
+  <header class="border-b border-dark-700 bg-dark-800/85 backdrop-blur sticky top-0 z-50 w-full">
+    <div class="w-full px-8 h-20 flex items-center justify-between">
+      <a href="homepage.html" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-500 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+          <i class="fa-solid fa-music"></i>
+        </div>
+        <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">GigHarmony</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="homepage.html" class="text-gray-300 hover:text-white transition">Home</a>
+        <a href="discoverypage.html" class="text-white font-semibold transition border-b-2 border-brand-500 pb-1">Discover</a>
+        <a href="musicianprofilepage.html" class="text-gray-300 hover:text-white transition">Profile</a>
+        <a href="musiciandashboard.html" class="text-gray-300 hover:text-white transition">Musician Dashboard</a>
+        <a href="hirerdashboard.html" class="text-gray-300 hover:text-white transition">Hirer Dashboard</a>
+      </nav>
+
+      <div>
+        <a href="checkoutpage.html" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl text-sm font-semibold transition shadow-lg shadow-brand-600/20">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Discovery Section -->
+  <main class="relative flex-grow w-full px-8 sm:px-16 py-12 max-w-[1600px] mx-auto space-y-10">
+    <!-- Ambient Background Glow -->
+    <div class="absolute top-10 right-10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Header & Search Controls -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-dark-700/60 pb-8">
+      <div>
+        <h1 class="text-4xl font-extrabold text-white tracking-tight">Discover Talent</h1>
+        <p class="text-gray-400 text-sm mt-1">Explore top-rated musicians, bands, and solo artists for your next event.</p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="flex flex-wrap items-center gap-3">
+        <div class="relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+          <input type="text" placeholder="Search by name, genre..." class="bg-dark-800/80 border border-dark-700/80 text-sm text-white rounded-xl pl-10 pr-4 py-2.5 focus:outline-none focus:border-brand-500 transition w-64">
+        </div>
+        <button class="px-4 py-2.5 bg-dark-800/80 hover:bg-dark-700 border border-dark-700 rounded-xl text-xs font-semibold text-gray-300 transition flex items-center gap-2">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- Artist Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+     <div class="p-6 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-5 hover:border-brand-500/50 transition duration-300 flex flex-col justify-between">
+  <div class="space-y-4">
+    <div class="h-48 bg-dark-700 rounded-xl overflow-hidden relative">
+      <img src="21480.jpg" alt="Nanath Piyarudeewan" class="w-full h-full object-cover object-[center_35%]">
+      <span class="absolute top-3 right-3 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">Available</span>
+    </div>
+
+    <div class="flex items-start justify-between">
+      <div>
+        <h3 class="text-xl font-bold text-white">Nanath Piyarudeewan</h3>
+        <p class="text-xs text-gray-400 mt-0.5">Classical • Orchestral • Contemporary</p>
+      </div>
+      <div class="text-right">
+        <span class="text-lg font-bold text-white">$150</span>
+        <span class="text-xs text-gray-400">/hr</span>
+      </div>
+    </div>
+
+    <p class="text-sm text-gray-400 line-clamp-2">Expressive solo flute performances bringing elegant classical repertoire, chamber pieces, and melodic arrangements to private sets and formal venues.</p>
+  </div>
+
+  <div class="pt-2 border-t border-dark-700/60 flex items-center justify-between">
+    <div class="flex items-center space-x-1 text-amber-400 text-xs font-bold">
+      <i class="fa-solid fa-star"></i>
+      <span>4.9</span>
+      <span class="text-gray-500 font-normal">(38 gigs)</span>
+    </div>
+    <a href="musicianprofilepage1.html" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-semibold transition">View Profile</a>
+  </div>
+</div>
+
+      <!-- Card 2 -->
+      <div class="p-6 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-5 hover:border-brand-500/50 transition duration-300 flex flex-col justify-between">
+  <div class="space-y-4">
+    <div class="h-48 bg-dark-700 rounded-xl overflow-hidden relative">
+      <img src="21728.jpg" alt="Big San" class="w-full h-full object-cover object-[center_65%]">
+      <span class="absolute top-3 right-3 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">Available</span>
+    </div>
+
+    <div class="flex items-start justify-between">
+      <div>
+        <h3 class="text-xl font-bold text-white">Big San</h3>
+        <p class="text-xs text-gray-400 mt-0.5">Classical • Orchestral • Euphonium</p>
+      </div>
+      <div class="text-right">
+        <span class="text-lg font-bold text-white">$320</span>
+        <span class="text-xs text-gray-400">/hr</span>
+      </div>
+    </div>
+
+    <p class="text-sm text-gray-400 line-clamp-2">Rich, resonant euphonium performances bringing deep brass melodies and expressive classical repertoire to private events and recitals.</p>
+  </div>
+
+  <div class="pt-2 border-t border-dark-700/60 flex items-center justify-between">
+    <div class="flex items-center space-x-1 text-amber-400 text-xs font-bold">
+      <i class="fa-solid fa-star"></i>
+      <span>5.0</span>
+      <span class="text-gray-500 font-normal">(52 gigs)</span>
+    </div>
+    <a href="musicianprofilepage.html" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-semibold transition">View Profile</a>
+  </div>
+</div>
+
+      <!-- Card 3 -->
+      <div class="p-6 rounded-2xl bg-dark-800/40 border border-dark-700/60 backdrop-blur space-y-5 hover:border-brand-500/50 transition duration-300 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="h-48 bg-dark-700 rounded-xl overflow-hidden relative">
+            <img src="21471.jpg" alt="Puttitada Rujimethut" class="w-full h-full object-cover object-[center_35%]">
+            <span class="absolute top-3 right-3 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">Available</span>
+          </div>
+
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white">Puttitada Rujimethut</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Classical • Jazz • Piano</p>
+            </div>
+            <div class="text-right">
+              <span class="text-lg font-bold text-white">$200</span>
+              <span class="text-xs text-gray-400">/hr</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-400 line-clamp-2">Expressive classical compositions and smooth jazz arrangements, perfect for private events, luxury lounges, and recitals.</p>
+        </div>
+
+        <div class="pt-2 border-t border-dark-700/60 flex items-center justify-between">
+          <div class="flex items-center space-x-1 text-amber-400 text-xs font-bold">
+            <i class="fa-solid fa-star"></i>
+            <span>5.0</span>
+            <span class="text-gray-500 font-normal">(42 gigs)</span>
+          </div>
+          <a href="musicianprofilepage.html" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-semibold transition">View Profile</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
